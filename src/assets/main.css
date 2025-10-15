@@ -1,0 +1,116 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  background-color:  #1d2832;
+   color: cadetblue;
+    --color-heading: #eee;
+
+      display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: stretch;
+
+}
+.v-application {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.v-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: rgba(0, 0, 0, 0.408);
+}
+
+.nav-links-wrapper {
+  display: flex;
+  align-items: center;
+  /* Distribute space between links, or use margins (see below) */
+  /* Option 1: spread them */
+  /* justify-content: space-between; */
+  
+  /* Option 2: group them with gaps */
+  gap: 24px;            /* <-- modern CSS: gap between each link */
+  background-color:"#fffd"
+}
+
+.nav-link {
+  text-decoration: none;
+  
+}
+
+/* Style the active link (adjust as needed) */
+.router-link-exact-active .v-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, .logo, .v-toolbar-title {
+  font-family: 'Playfair Display', serif;
+}
+
+.v-app-bar .v-btn {
+  font-family: 'Montserrat', sans-serif;
+}.hero-container {
+  background-image: url('../assets/background.JPG'); /* Replace with your background */
+  background-size: cover;          /* Cover the entire container */
+  background-position: center;     /* Center the image */
+  background-repeat: no-repeat;    /* Prevent tiling */
+  padding: 60px 20px;              /* Optional: add extra padding */
+  color: white;  
+  max-height: max-content                  /* Ensure text is readable */
+}
+.hero-container img {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+  z-index: 1;
+}
+
+/* 👇 make content appear above the overlay */
+.hero-container > * {
+  position: relative;
+  z-index: 1;
+}
