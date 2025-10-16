@@ -6,26 +6,21 @@
   <v-app>
     <v-app-bar app color="#fffd" >
          
-      <v-toolbar-title>
-       <img src="./assets/logo.png" alt="Dominic Panthiruvelil" :width="150" height="70"/>
+      <v-toolbar-title  class="d-flex align-center">
+       <img src="./assets/logo.png" alt="Dominic Panthiruvelil"  class="logo-img"/>
         
       </v-toolbar-title>
  
       <v-spacer />
 
       <div class="nav-links-wrapper">
-        <!-- <router-link to="/" class="nav-link">
-          <v-btn text>Home</v-btn>
-        </router-link> -->
+
         <router-link to="/gallery" class="nav-link">
           <v-btn text>Gallery</v-btn>
         </router-link>
         <router-link to="/about" class="nav-link">
-          <v-btn text>About</v-btn>
+          <v-btn text>Bio</v-btn>
         </router-link>
-        <!-- <router-link to="/contact" class="nav-link">
-          <v-btn text>Contact</v-btn>
-        </router-link> -->
       </div>
     </v-app-bar>
 

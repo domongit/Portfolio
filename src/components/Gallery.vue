@@ -10,16 +10,23 @@
         lg="3"
       >
         <v-card @click="viewPhoto(photo)" elevation="3" class="hover-card">
-          <v-img :src="photo.download_url" height="200px" cover  lazy-src="https://via.placeholder.com/10x10?text=+"></v-img>
-          <!-- <v-card-text class="text-center">{{ photo.title }}</v-card-text> -->
+          <v-img :src="photo.download_url" height="200px" cover  ></v-img>
+                <template v-slot:placeholder>
+                  <div class="d-flex align-center justify-center fill-height">
+                    <v-progress-circular 
+                      color="grey-lighten-4" 
+                      indeterminate
+                    ></v-progress-circular>
+                  </div>
+                </template>
         </v-card>
       </v-col>
     </v-row>
 
-    <v-dialog v-model="dialog" max-width="800">
+    <v-dialog v-model="dialog"  max-width="90vw">
       <v-card>
-        <v-img :src="selectedPhoto.download_url" height="500px" cover></v-img>
-        <!-- <v-card-text class="text-center">{{ selectedPhoto.title }}</v-card-text> -->
+        <v-img :src="selectedPhoto.download_url" class="responsive-img" cover></v-img>
+
         <v-card-actions class="justify-center">
           <v-btn color="primary" @click="dialog = false">Close</v-btn>
         </v-card-actions>
