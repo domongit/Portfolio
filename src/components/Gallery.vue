@@ -23,9 +23,11 @@
       </v-col>
     </v-row>
 
-    <v-dialog v-model="dialog"  max-width="90vw">
-      <v-card>
-        <v-img :src="selectedPhoto.download_url" class="responsive-img" cover></v-img>
+    <v-dialog v-model="dialog"  max-width="60vw"  >
+      <v-card class="d-flex flex-column">
+        <v-img :src="selectedPhoto.download_url"    max-height="75vh"
+     
+       ></v-img>
 
         <v-card-actions class="justify-center">
           <v-btn color="primary" @click="dialog = false">Close</v-btn>

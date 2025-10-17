@@ -4,24 +4,23 @@
 
 <template>
   <v-app>
-    <v-app-bar app color="#fffd" >
+    <v-app-bar app   >
          
-      <v-toolbar-title  class="d-flex align-center">
+      <v-toolbar-title  class="justify-center ">
        <img src="./assets/logo.png" alt="Dominic Panthiruvelil"  class="logo-img"/>
-        
       </v-toolbar-title>
  
       <v-spacer />
-
-      <div class="nav-links-wrapper">
-
-        <router-link to="/gallery" class="nav-link">
+        <router-link to="/gallery" >
           <v-btn text>Gallery</v-btn>
         </router-link>
-        <router-link to="/about" class="nav-link">
+        <router-link to="/about">
           <v-btn text>Bio</v-btn>
         </router-link>
-      </div>
+      <!-- <div class="nav-links-wrapper justify-center "> -->
+
+       
+      <!-- </div> -->
     </v-app-bar>
 
     <v-main>
@@ -30,61 +29,4 @@
   </v-app>
 </template>
 
-<style>
-/* html, body, #app {
-  height: 100%;
-  margin: 0;
-}
-.v-application {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.v-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  color: black;
-} */
-
-.nav-links-wrapper {
-  display: flex;
-  align-items: center;
-  /* Distribute space between links, or use margins (see below) */
-  /* Option 1: spread them */
-  /* justify-content: space-between; */
-  
-  /* Option 2: group them with gaps */
-  gap: 24px;            /* <-- modern CSS: gap between each link */
-}
-
-.nav-link {
-  text-decoration: none;
-}
-
-/* Style the active link (adjust as needed) */
-.router-link-exact-active .v-btn {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-
-/* .logo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 36px;
-  font-weight: 400;
-  letter-spacing: 1px;
-} */
-
-/* body {
-  font-family: 'Montserrat', sans-serif;
-}
-
-h1, h2, h3, .logo, .v-toolbar-title {
-  font-family: 'Playfair Display', serif;
-}
-
-.v-app-bar .v-btn {
-  font-family: 'Montserrat', sans-serif;
-} */
-</style>
+ 
